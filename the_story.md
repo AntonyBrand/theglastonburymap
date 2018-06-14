@@ -1,32 +1,126 @@
-	This is CS50		
-	I'm Antony Brand, I live in Glastonbury, Somerset, UK, famous for…		
+https://api.what3words.com/v2/forward?addr=index.home.raft&display=full&format=json&key=HV8FXASY
+
+
+{  
+   "thanks":"Thanks from all of us at index.home.raft for using a what3words API",
+   "crs":{  
+      "type":"link",
+      "properties":{  
+         "href":"http:\/\/spatialreference.org\/ref\/epsg\/4326\/ogcwkt\/",
+         "type":"ogcwkt"
+      }
+   },
+   "words":"index.home.raft",
+   "bounds":{  
+      "southwest":{  
+         "lng":-0.203607,
+         "lat":51.521238
+      },
+      "northeast":{  
+         "lng":-0.203564,
+         "lat":51.521265
+      }
+   },
+   "geometry":{  
+      "lng":-0.203586,
+      "lat":51.521251
+   },
+   "language":"en",
+   "map":"http:\/\/w3w.co\/index.home.raft",
+   "status":{  
+      "reason":"OK",
+      "status":200
+   }
+}
+
+
+
+===============
+
+The back story
+
+My final project is:		
+The Glastonbury Map
+And will be at www.theglastonburymap.co.uk	
+
+
+This is CS50		
+I'm Antony Brand, I live in Glastonbury, Somerset, UK, where I work in a famous tourist attraction in Somerset with over a decade’s experience of listening, responding and advising tourists and pilgrims, helping with their transport needs
+
+UK, famous for…
+
+
+
+Tips for visitors:
+download google maps for use offline
+download overlay
 			
-	My final project is:		
-	The Glastonbury Map	GET URL?!	
+
+===============
+what3words API
+
+
+
+
+
+
+
+=====================
+
+Map overlay showing counties
+https://drive.google.com/open?id=1jJbNRorrVsRF7yQ8MZtlIXqy6rZKyDDL&usp=sharing
+
+google maps tips
+https://www.cbsnews.com/news/14-google-maps-tips-and-tricks/
+https://www.express.co.uk/life-style/science-technology/662426/Google-Maps-Hidden-Features-Tricks-Pro
+
+isochrone radius
+http://blog.traveltimeplatform.com/10-ways-to-create-the-perfect-radius-map
+
+https://www.cbsnews.com/news/14-google-maps-tips-and-tricks/
+https://www.express.co.uk/life-style/science-technology/662426/Google-Maps-Hidden-Features-Tricks-Pro
+
+This regex will validate UK postcodes 
+with preceding comma (found in CSV file),
+not the most elegantly
+,[a-zA-z{1,2}1-99a-zA-z' '{0,1}0-9a-zA-Za-zA-Z]
+
+
+I used https://www.freemaptools.com/
+	
+51.1474° N, 2.7185° W
+one degree of latitude =  111 km			
 			
-			
-			
-		Glossary	
-	A map, 50 miles around Glastonbury (approx)		
+The units digit (one decimal degree) 111 kilometers 69 miles). It can tell us roughly what large state or country we are in.
+first d.p. =  11.1 km: it can distinguish the position of one large city from a neighboring large city.
+second d.p. =  1.1 km: it can separate one village from the next.
+third d.p. = 110 m: it can identify a large agricultural field or institutional campus.
+fourth = 11 m: it can identify a parcel of land. It is comparable to the typical accuracy of an uncorrected GPS unit with no interference.
+fifth decimal  1.1 m: it distinguish trees from each other. Accuracy to this level with commercial GPS units can only be achieved with differential correction.
+sixth decimal 0.11 m: you can use this for laying out structures in detail, for designing landscapes, building roads. It should be more than good enough for tracking movements of glaciers and rivers. This can be achieved by taking painstaking measures with GPS, such as differentially corrected GPS.=
+
+
+Glossary	
+A map, 50 miles around Glastonbury (approx)		
 			
 Fri, 1 Jun 2018	Day 1		
 			
 			
-shortened editable URL to this page	https://bit.ly/2Jlp2Zk		
-	https://www.raspberrypi-spy.co.uk/2017/11/how-to-rotate-the-raspberry-pi-display-output/		
+
+https://www.raspberrypi-spy.co.uk/2017/11/how-to-rotate-the-raspberry-pi-display-output/		
 			
-	sudo nano /boot/config.txt		
-	display_rotate=0 for normal		
-	or = 1 for 90 degrees anticlockwise		
-	or = 2 for 180 degrees		
-	or = 3 for 270 degrees anticlockwise		
-	then reboot using 		
-	sudo reboot		
+sudo nano /boot/config.txt		
+display_rotate=0 for normal		
+or = 1 for 90 degrees anticlockwise		
+or = 2 for 180 degrees		
+or = 3 for 270 degrees anticlockwise		
+then reboot using 		
+sudo reboot		
+
+CS50's wonderful Kareem Zidane set up my offline IDE so that it uses a Dropbox folder as my Linux ~/workspace/	IDE	
+thus enabling me to liberate my code from the playpen or sandpit of CS50's IDE and access it through the mac terminal, my phone and other devices, hopefully including the Pi!		
 			
-	CS50's wonderful Kareem Zidane set up my offline IDE so that it uses a Dropbox folder as my Linux ~/workspace/	IDE	
-	thus enabling me to liberate my code from the playpen or sandpit of CS50's IDE and access it through the mac terminal, my phone and other devices, hopefully including the Pi!		
-			
-	Not so fast Batman!		
+Not so fast Batman!		
 			
 			
 	so how do I share my files between my mac and the Pi?		
@@ -68,46 +162,41 @@ shortened editable URL to this page	https://bit.ly/2Jlp2Zk
 	what's this all leading to though?		
 	www.theglastonburymap.com		
 	a maps mashup with…		
+				
 			
-	all places within the BA, BS, TA, GL, NP, CF and __ and __ postcodes		
-			
-	BA|BS|CF|DT|GL|NP|SN|SP|TA		
-	BA|BS|CF|DT|GL|NP|SN|SP|TA		
-	BS		
-	CF		
-	DT		
-	GL		
-	NP		
-	SN		
-	SP		
-	TA		
+	BA|BH|BS|CF|DT|EX|GL|NP|SN|SP|TA		
+	BA|BH|BS|CF|DT|EX|GL|NP|SN|SP|TA		
+		
 			
 	CSV -> CSV (later CSV -> python dict???)		
 	ukpostcodes.csv |------>  localcodes.csv		
 	UK postcodes are so cleverly designed that each code contains only a small number of buildings or part of a street		
-	the 96 MB files was too much for the CS50 IDE, LibreOffice	96.5 MB	reduced to
-	my first python code didn't give…		
-	couldn't see my BA6 8BS in there		
-	1. was it even in the actual file in the first place?	yes, the file ws fine	
-	2. if it was in the file then why is my code not working		
+	the 96 MB files was too much for the CS50 IDE, LibreOffice	96.5 MB	reduced to 8.3 MB
+
+my first python code didn't give…		
+couldn't see my BA6 8BS in there		
+1. was it even in the actual file in the first place?	yes, the file ws fine	
+2. if it was in the file then why is my code not working		
 			
 	special unlock codes for special people giving insider knowldge		
 			
-	it sends the temperature of my hot tub to my phone or to my B&B guests so they can stay up the top of Glastonbury Tor for as long as possible		
-	And the Raspberry Pi is so slow compared to my top spec 3 year old macbook pro…		
-	It also tells the shameful tragic tale of public transport in the town		
+it sends the temperature of my hot tub to my phone or to my B&B guests so they can stay up the top of Glastonbury Tor for as long as possible		
+And the Raspberry Pi is so slow compared to my top spec 3 year old macbook pro…		
+It also tells the shameful tragic tale of public transport in the town		
 			
-	coord -> 3words		
+coord -> 3words		
 			
-	copy the header over to the new file 		
-	$ head -n 1 reviews.csv > 66288.csv		
-	search all rows from review.csv that start with “66288,” and copy them into the output file		
-	$ grep '^66288,' reviews.csv >> 66288.csv		
+copy the header over to the new file 		
+$ head -n 1 reviews.csv > 66288.csv		
+search all rows from review.csv that start with “66288,” and copy them into the output file		
+$ grep '^66288,' reviews.csv >> 66288.csv		
 			
-	https://leaverou.github.io/regexplained/		
+https://leaverou.github.io/regexplained/	
 			
-	chmod 755 first.sh to make the text file executable, and run ./first.sh. 		
-			
+chmod 755 first.sh to make the text file executable, and run ./first.sh. 
+first
+
+Strategy, breadth first approach, just like CS50, with pointers/guidelines for enhancements
 			
 Tue, 5 Jun 2018	Just finished the first bash script last night		
 	I should add in some logging facility like the early C problem sets		
@@ -141,7 +230,10 @@ As a young gay man I was suspicious of the motives of his phone call so didn't r
 	Maybe Queerwulf could help		
 			
 	to GUI or Command line....		
-			
+
+
+
+++++++++++++++++++++++++++++		
 
 Peter J. Landin (1930–2009)
 https://pdfs.semanticscholar.org/b179/0d07133993af4d0ef4eae610cb66357393c1.pdf
@@ -153,7 +245,10 @@ danvy@cs.au.dk
 			
 
 Peter's room at QMC			
+
 			
+drawing circle overlays
+https://youtu.be/A0JfAMKD4z0?t=5m28s
 			
 			
 			
@@ -540,354 +635,4 @@ Peter's room at QMC
 			
 			
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-	
+		
