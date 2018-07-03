@@ -1,9 +1,3 @@
 with import<nixpkgs> {};
-stdenv.mkDerivation rec {
-  name = "env";
-  env = buildEnv { name = name; paths = buildInputs; };
-  buildInputs = [
-  python3
-  python36Packages.flask
-  ];
-}
+
+(python36.withPackages (ps: [ps.flask])).env
