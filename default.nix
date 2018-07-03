@@ -3,7 +3,6 @@ stdenv.mkDerivation rec {
   name = "env";
   env = buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
-  python3
-  python36Packages.flask
+  python3.withpackages
   ];
 }
