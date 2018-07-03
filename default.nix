@@ -3,6 +3,6 @@ stdenv.mkDerivation rec {
   name = "env";
   env = buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
-  python3.withpackages
+  python3.withPackages
   ];
 }
